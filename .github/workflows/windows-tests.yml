@@ -20,4 +20,3 @@ jobs:
       - name: Parse scripts and exercise isolated registry fixtures
         shell: pwsh
         run: ./tests/Run-Tests.ps1
-
