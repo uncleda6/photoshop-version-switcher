@@ -1,0 +1,8 @@
+backups/
+requests/
+.desktop-requests/
+dist/
+*.reg
+*.local.json
+*.log
+test-results/

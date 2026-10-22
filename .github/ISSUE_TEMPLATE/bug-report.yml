@@ -1,0 +1,40 @@
+name: Bug report / 问题反馈
+description: Report a missing version or association problem / 反馈版本缺失或关联问题
+body:
+  - type: markdown
+    attributes:
+      value: Please redact usernames and personal paths. Do not attach registry backups or PSD documents. / 请遮盖用户名和个人路径，不要上传注册表备份或 PSD 文件。
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version / Windows 版本
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: input
+    id: photoshop
+    attributes:
+      label: Photoshop versions / Photoshop 版本
+      placeholder: 2023 and 2025
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior / 预期与实际结果
+      description: Which names appear in the picker, and which version opens the file? / 列表显示哪些名字，实际由哪个版本打开？
+    validations:
+      required: true
+  - type: dropdown
+    id: context
+    attributes:
+      label: Launch method / 运行方式
+      options:
+        - Start.cmd from File Explorer / 文件资源管理器双击
+        - PowerShell command line / PowerShell 命令行
+        - DesktopContext option / 使用 DesktopContext 参数
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Redacted diagnostic excerpt / 脱敏后的必要诊断片段
+      render: text

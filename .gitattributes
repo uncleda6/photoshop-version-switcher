@@ -1,0 +1,5 @@
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.cmd -text whitespace=cr-at-eol
+*.md text eol=lf
+*.yml text eol=lf
