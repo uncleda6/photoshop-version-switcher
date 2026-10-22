@@ -6,14 +6,18 @@ on:
 permissions:
   contents: read
 jobs:
-  test:
+  windows-powershell:
     runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shell: [powershell, pwsh]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Parse scripts and exercise isolated registry fixtures
-        shell: ${{ matrix.shell }}
+        shell: powershell
         run: ./tests/Run-Tests.ps1
+  powershell-7:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Parse scripts and exercise isolated registry fixtures
+        shell: pwsh
+        run: ./tests/Run-Tests.ps1
+
